@@ -199,7 +199,7 @@ export class CascadinglotWinCalculator implements VideoSlotWinCalculating {
         return SymbolsCombinationsAnalyzer.getScatterSymbolsPositions(this.symbolsCombination.toMatrix(), symbolId);
     }
 
-    private floodFill(symbol: string, row: number, col: number, visited: Set<string>, group: [number, number][]) {
+    private floodFill(symbol: string, row: number, col: number, visited: Set<string>, wildsVisited: Set<string>, group: [number, number][]) {
         if (col < 0 || col >= this.config.getReelsNumber()) {
             return;
         }
@@ -214,17 +214,21 @@ export class CascadinglotWinCalculator implements VideoSlotWinCalculating {
         }
 
         const key = `${row}x${col}`;
-        if (visited.has(key) && !this.config.isSymbolWild(currSymbol)) {
+        if (visited.has(key)) {
             return;
         }
         visited.add(key);
+        if (this.config.isSymbolWild(currSymbol)) {
+            wildsVisited.add(key);
+        }
 
         group.push([row, col]);
 
-        this.floodFill(symbol, row + 1, col, visited, group);
-        this.floodFill(symbol, row - 1, col, visited, group);
-        this.floodFill(symbol, row, col + 1, visited, group);
-        this.floodFill(symbol, row, col - 1, visited, group);
+        this.floodFill(symbol, row + 1, col, visited, wildsVisited, group);
+        this.floodFill(symbol, row - 1, col, visited, wildsVisited, group);
+        this.floodFill(symbol, row, col + 1, visited, wildsVisited, group);
+        this.floodFill(symbol, row, col - 1, visited, wildsVisited, group);
+
     }
 
     private calculateWinningClusters(bet: number): Record<string, WinningCluster[]> {
@@ -246,7 +250,11 @@ export class CascadinglotWinCalculator implements VideoSlotWinCalculating {
                 }
 
                 const group: [number, number][] = [];
-                this.floodFill(symbol, row, col, visited, group);
+                const wildsVisited = new Set<string>();
+                this.floodFill(symbol, row, col, visited, wildsVisited, group);
+
+                // Remove the wilds to be used again from visited space
+                wildsVisited.forEach(wildKey => visited.delete(wildKey));
 
                 if (group.length > 0) {
                     const amount = this.config.getPaytable().getWinAmountForSymbol(symbol, group.length, bet);

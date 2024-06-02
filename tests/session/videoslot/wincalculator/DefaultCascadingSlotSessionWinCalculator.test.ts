@@ -1,4 +1,4 @@
-import {VideoSlotConfig, SymbolsCombinationsGenerator, CascadinglotWinCalculator, SymbolsCombination, CascadingSlotPaytable, CascadingSlotSession, CustomLinesDefinitions} from "pokie";
+import {VideoSlotConfig, SymbolsCombinationsGenerator, CascadinglotWinCalculator, SymbolsCombination, CascadingSlotPaytable, CascadingSlotSession, CustomLinesDefinitions, SymbolsSequence} from "pokie";
 
 describe("DefaultCascadingSlotSessionWinCalculator - Cluster Tests", () => {
     const config = new VideoSlotConfig();
@@ -9,6 +9,34 @@ describe("DefaultCascadingSlotSessionWinCalculator - Cluster Tests", () => {
     config.setAvailableSymbols([...regularSymbols, ...scatterSymbols, ...wildSymbols]);
     config.setScatterSymbols(scatterSymbols);
     config.setWildSymbols(wildSymbols);
+
+    const sequences: SymbolsSequence[] = [];
+    for (let i = 0; i < config.getReelsNumber(); i++) {
+        const sequence = new SymbolsSequence();
+
+        sequence.fromNumbersOfSymbols({
+            CircleCandy: 20,
+            HeartCandy: 20,
+            BeanCandy: 20,
+            StarCandy: 20,
+            Wild: 5,
+            Scatter1: 2,
+        });
+
+        /*
+        The sequence we've just created will contain the stacks of the size of the number of every symbol we've provided.
+        We need to shuffle it to have symbols distributed randomly on the sequence.
+        */
+        sequence.shuffle();
+
+        /*
+        Once we have the properly built sequence, we save it for the current reel.
+        */
+        sequences.push(sequence);
+    }
+    config.setSymbolsSequences(sequences);
+
+
     const winCalculator = new CascadinglotWinCalculator(config);
     const paytable = new CascadingSlotPaytable(config.getAvailableBets(), config.getAvailableSymbols(), 
         config.getWildSymbols());
@@ -197,6 +225,45 @@ describe("DefaultCascadingSlotSessionWinCalculator - Cluster Tests", () => {
         expect(session.getCascadingResults()).toHaveLength(2);
         expect(session.getCascadingResults()[0].winAmount).toBe(4);
         expect(session.getCascadingResults()[1].winAmount).toBe(10);
+    });
+
+    test('playWithClustersAndWilds - Multiple touching wilds eventually end calculating', () => {
+        const [symbol1, symbol2, symbol3] = regularSymbols;
+        const [scatter1] = scatterSymbols;
+        const [wild] = wildSymbols;
+        const generator = new SymbolsCombinationsGenerator(config);
+        jest.spyOn(generator, 'generateSymbolsCombination').mockImplementation(() => {
+            return new SymbolsCombination().fromMatrix([
+                [scatter1, symbol1, symbol1, wild, wild],
+                [scatter1, symbol1, symbol1, symbol1, symbol2],
+                [scatter1, symbol3, scatter1, symbol2, symbol1],
+            ], true);       
+        });
+        const nextSymbolsSpy = jest.spyOn(generator, 'generateNextSymbolCombination').mockImplementation((reelId: number, symbols: number) => {
+            switch (reelId) {
+                case 0:
+                case 2:
+                    return [symbol1, symbol2, symbol3, symbol2, symbol1].slice(0, symbols);
+                case 1:
+                case 3:
+                    return [symbol2, symbol1, symbol1, symbol2, symbol3].slice(0, symbols);
+                case 4:
+                default:
+                    return [symbol3, symbol3, symbol1, symbol2, symbol2].slice(0, symbols);
+
+            }
+        });
+
+        const session = new CascadingSlotSession(config, generator, winCalculator);
+
+        session.play();
+
+        expect(nextSymbolsSpy).toBeCalledTimes(4);
+        expect(session.getWinAmount()).toBe(23);
+        expect(session.getCascadingResults()).toHaveLength(2);
+        expect(session.getCascadingResults()[0].winningClusters[symbol1][0].getSymbolsPositions()).toHaveLength(7);
+        expect(session.getCascadingResults()[0].winAmount).toBe(3);
+        expect(session.getCascadingResults()[1].winAmount).toBe(20);
     });
 
     test('playWithClustersDroppedIn - Scatters awarded once at end for total scatters', () => {
