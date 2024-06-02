@@ -1,7 +1,7 @@
 import {PaytableRepresenting} from "pokie";
 
 export class Paytable implements PaytableRepresenting {
-    private paytableMap: Record<number, Record<string, Record<number, number>>>;
+    protected paytableMap: Record<number, Record<string, Record<number, number>>>;
 
     constructor(availableBets: number[], availableSymbols?: string[], wildSymbols?: string[], reelsNumber?: number) {
         this.paytableMap = Paytable.createDefaultPaytableMap(availableBets, availableSymbols, wildSymbols, reelsNumber);

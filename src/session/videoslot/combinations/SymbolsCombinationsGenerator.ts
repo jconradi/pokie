@@ -10,10 +10,12 @@ import {
 export class SymbolsCombinationsGenerator implements SymbolsCombinationsGenerating {
     private readonly rng: RandomNumberGenerating;
     private readonly config: VideoSlotConfigDescribing;
+    private readonly lastStops: number[];
 
     constructor(config: VideoSlotConfigDescribing, rng: RandomNumberGenerating = new PseudorandomNumberGenerator()) {
         this.config = config;
         this.rng = rng;
+        this.lastStops = Array(config.getReelsNumber());
     }
 
     public generateSymbolsCombination(): SymbolsCombinationDescribing {
@@ -24,9 +26,17 @@ export class SymbolsCombinationsGenerator implements SymbolsCombinationsGenerati
         return new SymbolsCombination().fromMatrix(arr);
     }
 
+    public generateNextSymbolCombination(reelId: number, symbols: number): string[] {
+        const sequence = this.config.getSymbolsSequences()[reelId];
+        const lastStop = this.lastStops[reelId] + 1;
+        this.lastStops[reelId] = lastStop + symbols;
+        return sequence.getSymbols(lastStop, symbols);
+    }
+
     private getRandomReelSymbols(reelId: number): string[] {
         const sequence = this.config.getSymbolsSequences()[reelId];
         const random = this.rng.getRandomInt(0, sequence.getSize());
+        this.lastStops[reelId] = random + this.config.getReelsSymbolsNumber();
         return sequence.getSymbols(random, this.config.getReelsSymbolsNumber());
     }
 }
