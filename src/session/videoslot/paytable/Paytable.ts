@@ -1,4 +1,4 @@
-import {PaytableRepresenting} from "pokie";
+import {PaytableRepresenting} from "@jconradi/pokie";
 
 export class Paytable implements PaytableRepresenting {
     protected paytableMap: Record<number, Record<string, Record<number, number>>>;

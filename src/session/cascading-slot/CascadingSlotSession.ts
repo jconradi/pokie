@@ -3,7 +3,7 @@ import {
     LinesDefinitionsDescribing, LinesPatternsDescribing, PaytableRepresenting,
     SymbolsCombination, SymbolsCombinationDescribing,
     SymbolsCombinationsGenerator, SymbolsSequenceDescribing, VideoSlotConfig, VideoSlotConfigDescribing, VideoSlotConfigRepresenting, WinningClusterDescribing, WinningLineDescribing, WinningScatterDescribing
-} from "pokie";
+} from "@jconradi/pokie";
 
 export interface CascadingResult {
     winningLines: Record<string, WinningLineDescribing>;

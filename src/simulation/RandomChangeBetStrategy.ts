@@ -1,4 +1,4 @@
-import {BetForNextSimulationRoundSetting, GameSessionHandling} from "pokie";
+import {BetForNextSimulationRoundSetting, GameSessionHandling} from "@jconradi/pokie";
 
 export class RandomChangeBetStrategy implements BetForNextSimulationRoundSetting {
     public setBetForNextRound(session: GameSessionHandling): void {

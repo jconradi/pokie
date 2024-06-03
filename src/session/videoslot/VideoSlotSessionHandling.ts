@@ -1,4 +1,4 @@
-import {GameSessionHandling, VideoSlotConfigDescribing, VideoSlotRoundStateDetermining} from "pokie";
+import {GameSessionHandling, VideoSlotConfigDescribing, VideoSlotRoundStateDetermining} from "@jconradi/pokie";
 
 export interface VideoSlotSessionHandling
     extends VideoSlotConfigDescribing,

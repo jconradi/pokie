@@ -4,7 +4,7 @@ import {
     GameSessionStateSetting,
     PlayableGame,
     WinAmountDetermining,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export interface GameSessionHandling
     extends GameSessionStateDetermining,

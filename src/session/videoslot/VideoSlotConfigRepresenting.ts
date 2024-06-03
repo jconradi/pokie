@@ -1,4 +1,4 @@
-import {GameSessionConfigRepresenting, VideoSlotConfigDescribing, VideoSlotConfigSetting} from "pokie";
+import {GameSessionConfigRepresenting, VideoSlotConfigDescribing, VideoSlotConfigSetting} from "@jconradi/pokie";
 
 export interface VideoSlotConfigRepresenting
     extends GameSessionConfigRepresenting,

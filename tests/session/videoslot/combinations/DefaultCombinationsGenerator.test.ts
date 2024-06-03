@@ -1,4 +1,4 @@
-import {VideoSlotConfig, SymbolsCombinationsGenerator, SymbolsSequence} from "pokie";
+import {VideoSlotConfig, SymbolsCombinationsGenerator, SymbolsSequence} from "@jconradi/pokie";
 
 describe("DefaultCombinationsGenerator", () => {
     let combinationsGenerator: SymbolsCombinationsGenerator;

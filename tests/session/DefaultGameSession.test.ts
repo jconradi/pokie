@@ -1,4 +1,4 @@
-import {GameSession, GameSessionConfig} from "pokie";
+import {GameSession, GameSessionConfig} from "@jconradi/pokie";
 import {
     createCustomConfigForTestProperInitialValues,
     createCustomConfigForWrongBetTest,

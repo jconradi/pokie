@@ -1,4 +1,4 @@
-import {GameSessionHandling, GameSessionSerializing, GameInitialNetworkData, GameRoundNetworkData} from "pokie";
+import {GameSessionHandling, GameSessionSerializing, GameInitialNetworkData, GameRoundNetworkData} from "@jconradi/pokie";
 
 export class GameSessionSerializer implements GameSessionSerializing {
     private static getDefaultData(session: GameSessionHandling): GameRoundNetworkData {

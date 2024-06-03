@@ -4,7 +4,7 @@ import {
     NextSessionRoundPlayableDetermining,
     SimulationConfigRepresenting,
     SimulationHandling,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export class Simulation implements SimulationHandling {
     private readonly session: GameSessionHandling;

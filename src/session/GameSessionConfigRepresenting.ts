@@ -4,7 +4,7 @@ import {
     AvailableBetsSetting,
     GameSessionStateDetermining,
     GameSessionStateSetting,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export interface GameSessionConfigRepresenting
     extends GameSessionStateDetermining,

@@ -5,7 +5,7 @@ import {
     VideoSlotWithFreeGamesRoundNetworkData,
     VideoSlotWithFreeGamesSessionHandling,
     VideoSlotWithFreeGamesSessionSerializing,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export class VideoSlotWithFreeGamesSessionSerializer implements VideoSlotWithFreeGamesSessionSerializing {
     private readonly baseSerializer: VideoSlotSessionSerializing;

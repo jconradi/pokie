@@ -1,4 +1,4 @@
-import {VideoSlotConfig, SymbolsCombinationsGenerator, CascadinglotWinCalculator, SymbolsCombination, CascadingSlotPaytable, CascadingSlotSession, CustomLinesDefinitions, SymbolsSequence} from "pokie";
+import {VideoSlotConfig, SymbolsCombinationsGenerator, CascadinglotWinCalculator, SymbolsCombination, CascadingSlotPaytable, CascadingSlotSession, CustomLinesDefinitions, SymbolsSequence} from "@jconradi/pokie";
 
 describe("DefaultCascadingSlotSessionWinCalculator - Cluster Tests", () => {
     const config = new VideoSlotConfig();

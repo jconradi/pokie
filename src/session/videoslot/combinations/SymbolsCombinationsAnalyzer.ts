@@ -1,4 +1,4 @@
-import {LinesDefinitionsDescribing, SymbolsSequenceDescribing} from "pokie";
+import {LinesDefinitionsDescribing, SymbolsSequenceDescribing} from "@jconradi/pokie";
 
 export class SymbolsCombinationsAnalyzer {
     public static getSymbolsForDefinition(symbols: string[][], definition: number[]): string[] {

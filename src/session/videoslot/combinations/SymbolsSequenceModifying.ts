@@ -1,4 +1,4 @@
-import {BuildableFromArray} from "pokie";
+import {BuildableFromArray} from "@jconradi/pokie";
 
 export interface SymbolsSequenceModifying extends BuildableFromArray {
     addSymbol(symbolId: string, stackSize?: number, index?: number): this;

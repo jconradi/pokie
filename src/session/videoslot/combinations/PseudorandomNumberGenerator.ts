@@ -1,4 +1,4 @@
-import {RandomNumberGenerating} from "pokie";
+import {RandomNumberGenerating} from "@jconradi/pokie";
 
 export class PseudorandomNumberGenerator implements RandomNumberGenerating {
     public getRandomInt(min: number, max: number): number {

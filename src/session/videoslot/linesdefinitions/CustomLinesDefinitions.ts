@@ -1,4 +1,4 @@
-import {LinesDefinitionsDescribing} from "pokie";
+import {LinesDefinitionsDescribing} from "@jconradi/pokie";
 
 export class CustomLinesDefinitions implements LinesDefinitionsDescribing {
     private linesDefinitionsMap: Record<string, number[]> = {};

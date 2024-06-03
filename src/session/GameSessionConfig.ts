@@ -1,4 +1,4 @@
-import {GameSessionConfigRepresenting} from "pokie";
+import {GameSessionConfigRepresenting} from "@jconradi/pokie";
 
 export class GameSessionConfig implements GameSessionConfigRepresenting {
     private availableBets = [1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 100];

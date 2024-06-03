@@ -2,7 +2,7 @@ import {
     GameWithFreeGamesSessionHandling,
     VideoSlotSessionHandling,
     VideoSlotWithFreeGamesConfigDescribing,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export interface VideoSlotWithFreeGamesSessionHandling
     extends VideoSlotSessionHandling,

@@ -4,7 +4,7 @@ import {
     ConvertableToMap,
     PaytableSymbolsPayoutsDescribing,
     PaytableSymbolsPayoutsSetting,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export interface PaytableRepresenting
     extends ConvertableToMap<number, Record<string, Record<number, number>>>,

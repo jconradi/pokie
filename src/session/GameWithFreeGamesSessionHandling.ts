@@ -3,7 +3,7 @@ import {
     FreeGamesStateSetting,
     GameSessionHandling,
     WonFreeGamesNumberDetermining,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export interface GameWithFreeGamesSessionHandling
     extends GameSessionHandling,

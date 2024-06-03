@@ -1,4 +1,4 @@
-import {SymbolsSequenceRepresenting} from "pokie";
+import {SymbolsSequenceRepresenting} from "@jconradi/pokie";
 
 export class SymbolsSequence implements SymbolsSequenceRepresenting {
     private sequence: string[];

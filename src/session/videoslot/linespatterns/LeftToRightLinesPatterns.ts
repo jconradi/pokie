@@ -1,4 +1,4 @@
-import {LinesPatternsDescribing} from "pokie";
+import {LinesPatternsDescribing} from "@jconradi/pokie";
 
 export class LeftToRightLinesPatterns implements LinesPatternsDescribing {
     private readonly patterns: number[][];

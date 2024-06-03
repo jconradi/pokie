@@ -1,4 +1,4 @@
-import {WinAmountDetermining} from "pokie";
+import {WinAmountDetermining} from "@jconradi/pokie";
 
 export class NoWinAmount implements WinAmountDetermining {
     public getWinAmount(): number {

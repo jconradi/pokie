@@ -1,4 +1,4 @@
-import {BetForNextSimulationRoundSetting, NextSessionRoundPlayableDetermining} from "pokie";
+import {BetForNextSimulationRoundSetting, NextSessionRoundPlayableDetermining} from "@jconradi/pokie";
 
 export interface SimulationConfigDescribing {
     getNumberOfRounds(): number;

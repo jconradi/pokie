@@ -1,4 +1,4 @@
-import {WinningLineDescribing} from "pokie";
+import {WinningLineDescribing} from "@jconradi/pokie";
 
 export class WinningLine implements WinningLineDescribing {
     private readonly winAmount: number;

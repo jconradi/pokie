@@ -2,7 +2,7 @@ import {
     VideoSlotConfigRepresenting,
     VideoSlotWithFreeGamesConfigDescribing,
     VideoSlotWithFreeGamesConfigSetting,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export interface VideoSlotWithFreeGamesConfigRepresenting
     extends VideoSlotConfigRepresenting,

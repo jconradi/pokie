@@ -2,7 +2,7 @@ import {
     BetForNextSimulationRoundSetting,
     SimulationConfigRepresenting,
     NextSessionRoundPlayableDetermining,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export class SimulationConfig implements SimulationConfigRepresenting {
     public static readonly DEFAULT_NUMBER_OF_ROUNDS: number = 1000;

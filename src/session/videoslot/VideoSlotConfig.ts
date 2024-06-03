@@ -9,7 +9,7 @@ import {
     SymbolsSequence,
     SymbolsSequenceDescribing,
     VideoSlotConfigRepresenting,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export class VideoSlotConfig implements VideoSlotConfigRepresenting {
     private readonly baseConfig: GameSessionConfig;

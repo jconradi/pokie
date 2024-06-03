@@ -1,4 +1,4 @@
-import {WinAmountDetermining, WinningLineDescribing, WinningScatterDescribing} from "pokie";
+import {WinAmountDetermining, WinningLineDescribing, WinningScatterDescribing} from "@jconradi/pokie";
 
 export interface VideoSlotWinDetermining extends WinAmountDetermining {
     getWinningLines(): Record<string, WinningLineDescribing>;

@@ -10,7 +10,7 @@ import {
     WinningLineDescribing,
     WinningScatter,
     WinningScatterDescribing,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export class CascadinglotWinCalculator implements VideoSlotWinCalculating {
     public static readonly EmptyCell: string = "";

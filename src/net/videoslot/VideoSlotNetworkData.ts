@@ -1,4 +1,4 @@
-import {GameInitialNetworkData, GameRoundNetworkData} from "pokie";
+import {GameInitialNetworkData, GameRoundNetworkData} from "@jconradi/pokie";
 
 export type VideoSlotInitialNetworkData = {
     availableSymbols: string[];

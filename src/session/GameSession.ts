@@ -4,7 +4,7 @@ import {
     GameSessionHandling,
     NoWinAmount,
     WinAmountDetermining,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export class GameSession implements GameSessionHandling {
     private readonly config: GameSessionConfigRepresenting;

@@ -1,4 +1,4 @@
-import {NextSessionRoundPlayableDetermining, VideoSlotSessionHandling, WinningLinesAnalyzer} from "pokie";
+import {NextSessionRoundPlayableDetermining, VideoSlotSessionHandling, WinningLinesAnalyzer} from "@jconradi/pokie";
 
 export class PlayUntilSymbolWinStrategy implements NextSessionRoundPlayableDetermining {
     private readonly symbolId: string;

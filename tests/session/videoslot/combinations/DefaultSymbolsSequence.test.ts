@@ -1,4 +1,4 @@
-import {SymbolsSequence} from "pokie";
+import {SymbolsSequence} from "@jconradi/pokie";
 
 describe("DefaultSymbolsSequence", () => {
     let sequence: SymbolsSequence;

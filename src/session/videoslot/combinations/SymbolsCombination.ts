@@ -1,4 +1,4 @@
-import {SymbolsCombinationDescribing} from "pokie";
+import {SymbolsCombinationDescribing} from "@jconradi/pokie";
 
 export class SymbolsCombination implements SymbolsCombinationDescribing {
     private combination: string[][] = [];

@@ -1,4 +1,4 @@
-import {ConvertableToArray} from "pokie";
+import {ConvertableToArray} from "@jconradi/pokie";
 
 export interface SymbolsSequenceDescribing extends ConvertableToArray {
     getIndex(index: number): number;

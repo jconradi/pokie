@@ -1,4 +1,4 @@
-import {GameSessionHandling, NextSessionRoundPlayableDetermining} from "pokie";
+import {GameSessionHandling, NextSessionRoundPlayableDetermining} from "@jconradi/pokie";
 
 export class PlayUntilAnyWinStrategy implements NextSessionRoundPlayableDetermining {
     public canPlayNextSimulationRound(session: GameSessionHandling): boolean {

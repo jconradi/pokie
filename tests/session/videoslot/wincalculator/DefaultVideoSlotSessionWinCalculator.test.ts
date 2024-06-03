@@ -6,7 +6,7 @@ import {
     VideoSlotConfig,
     VideoSlotWinCalculator,
     WinningLineDescribing,
-} from "pokie";
+} from "@jconradi/pokie";
 
 describe("DefaultVideoSlotSessionWinCalculator", () => {
     const config = new VideoSlotConfig();

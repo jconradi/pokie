@@ -3,7 +3,7 @@ import {
     VideoSlotWithFreeGamesConfig,
     VideoSlotWithFreeGamesSessionHandling,
     VideoSlotWithFreeGamesConfigRepresenting,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export const testDefaultVideoSlotWithFreeGamesSession = (session: VideoSlotWithFreeGamesSessionHandling): void => {
     expect(session.getFreeGamesNum()).toBe(0);

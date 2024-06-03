@@ -1,4 +1,4 @@
-import {WinAmountDetermining} from "pokie";
+import {WinAmountDetermining} from "@jconradi/pokie";
 
 export type ClustWinLocation = [number, number];
 

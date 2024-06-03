@@ -4,7 +4,7 @@ import {
     VideoSlotConfig,
     SymbolsCombinationsGenerator,
     VideoSlotWinCalculator,
-} from "pokie";
+} from "@jconradi/pokie";
 import {
     createCustomConfigForTestProperInitialValues,
     createCustomConfigForWrongBetTest,

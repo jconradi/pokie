@@ -5,7 +5,7 @@ import {
     VideoSlotRoundNetworkData,
     VideoSlotSessionHandling,
     VideoSlotSessionSerializing,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export class VideoSlotSessionSerializer implements VideoSlotSessionSerializing {
     private readonly baseSerializer: GameSessionSerializing;

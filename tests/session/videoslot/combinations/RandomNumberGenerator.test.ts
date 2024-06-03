@@ -1,4 +1,4 @@
-import {PseudorandomNumberGenerator, SecureRandomNumberGenerator} from "pokie";
+import {PseudorandomNumberGenerator, SecureRandomNumberGenerator} from "@jconradi/pokie";
 
 describe("PseudorandomNumberGenerator", () => {
     test("getRandomNumber should return a number between 0 and 1", () => {

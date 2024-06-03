@@ -1,4 +1,4 @@
-import {WinningScatterDescribing} from "pokie";
+import {WinningScatterDescribing} from "@jconradi/pokie";
 
 export class WinningScatter implements WinningScatterDescribing {
     private readonly symbolId: string;

@@ -1,4 +1,4 @@
-import {SymbolsCombinationsAnalyzer, WinningLineDescribing} from "pokie";
+import {SymbolsCombinationsAnalyzer, WinningLineDescribing} from "@jconradi/pokie";
 
 export class WinningLinesAnalyzer {
     public static allLinesHaveSameSymbolId(lines: WinningLineDescribing[]): boolean {

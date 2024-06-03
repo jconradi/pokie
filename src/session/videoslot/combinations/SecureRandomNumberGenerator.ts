@@ -1,4 +1,4 @@
-import {RandomNumberGenerating} from "pokie";
+import {RandomNumberGenerating} from "@jconradi/pokie";
 import crypto from "crypto";
 
 export class SecureRandomNumberGenerator implements RandomNumberGenerating {

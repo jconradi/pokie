@@ -1,4 +1,4 @@
-import {RightToLeftLinesPatterns} from "pokie";
+import {RightToLeftLinesPatterns} from "@jconradi/pokie";
 
 describe("RightToLeftLinesPatterns", () => {
     it("contains lines patterns that describe winning symbols from right to left", () => {

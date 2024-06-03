@@ -1,4 +1,4 @@
-import {GameSessionHandling} from "pokie";
+import {GameSessionHandling} from "@jconradi/pokie";
 
 export interface BetForNextSimulationRoundSetting {
     setBetForNextRound(session: GameSessionHandling): void;

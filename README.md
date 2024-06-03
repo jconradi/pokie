@@ -67,7 +67,7 @@ A [Medium](https://medium.com/@sta-ger/exploring-video-slot-math-with-pokie-3bc7
 Video slot game logic.
 
 ```js
-import {VideoSlotSession} from "pokie";
+import {VideoSlotSession} from "@jconradi/pokie";
 
 const session = new VideoSlotSession();
 
@@ -84,7 +84,7 @@ session.getWinningScatters(); // winning scatters data
 Running a certain number of game rounds and calculating RTP.
 
 ```js
-import {SimulationConfig, Simulation} from "pokie";
+import {SimulationConfig, Simulation} from "@jconradi/pokie";
 
 const simulationConfig = new SimulationConfig();
 simulationConfig.setNumberOfRounds(10000);

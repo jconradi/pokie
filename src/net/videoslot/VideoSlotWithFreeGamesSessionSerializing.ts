@@ -4,7 +4,7 @@ import {
     VideoSlotWithFreeGamesInitialNetworkData,
     VideoSlotWithFreeGamesRoundNetworkData,
     VideoSlotWithFreeGamesSessionHandling,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export interface VideoSlotWithFreeGamesSessionSerializing
     extends VideoSlotSessionSerializing,

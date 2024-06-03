@@ -16,7 +16,7 @@ import {
     VideoSlotWinCalculator,
     WinningLineDescribing,
     WinningScatterDescribing,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export class VideoSlotSession implements VideoSlotSessionHandling {
     private readonly baseSession: GameSessionHandling;

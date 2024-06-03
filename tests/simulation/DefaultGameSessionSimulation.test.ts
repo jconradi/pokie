@@ -10,7 +10,7 @@ import {
     VideoSlotWinCalculator,
     SymbolsSequence,
     NextSessionRoundPlayableDetermining,
-} from "pokie";
+} from "@jconradi/pokie";
 
 describe("DefaultGameSessionSimulation", () => {
     test("playSpecifiedNumOfRoundsAndCalculateRtpTest", () => {

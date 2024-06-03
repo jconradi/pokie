@@ -1,4 +1,4 @@
-import {NextSessionRoundPlayableDetermining, VideoSlotWithFreeGamesSessionHandling} from "pokie";
+import {NextSessionRoundPlayableDetermining, VideoSlotWithFreeGamesSessionHandling} from "@jconradi/pokie";
 
 export class PlayFreeGamesStrategy implements NextSessionRoundPlayableDetermining {
     private exactNumberOfFreeGames?: number;

@@ -3,7 +3,7 @@ import {
     VideoSlotWinCalculator,
     VideoSlotWithFreeGamesConfig,
     VideoSlotWithFreeGamesSession,
-} from "pokie";
+} from "@jconradi/pokie";
 import {
     createCustomConfigForTestProperInitialValues,
     createCustomConfigForWrongBetTest,

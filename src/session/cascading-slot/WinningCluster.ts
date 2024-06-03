@@ -1,4 +1,4 @@
-import {ClustWinLocation, WinningClusterDescribing} from "pokie";
+import {ClustWinLocation, WinningClusterDescribing} from "@jconradi/pokie";
 
 export class WinningCluster implements WinningClusterDescribing {
     private readonly winAmount: number;

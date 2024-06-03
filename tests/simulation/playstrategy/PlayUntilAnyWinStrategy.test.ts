@@ -1,4 +1,4 @@
-import {PlayUntilAnyWinStrategy} from "pokie";
+import {PlayUntilAnyWinStrategy} from "@jconradi/pokie";
 import {GameSessionReturnSpecifiedWinMock} from "./GameSessionReturnSpecifiedWinMock.js";
 
 describe("PlayUntilAnyWinStrategy", () => {

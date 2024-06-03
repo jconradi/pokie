@@ -9,7 +9,7 @@
         "strict": true,
         "outDir": "dist/esm",
         "paths": {
-            "pokie": ["./src/index.ts"]
+            "@jconradi/pokie": ["./src/index.ts"]
         }
     },
     "include": ["src"]

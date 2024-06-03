@@ -1,4 +1,4 @@
-import {PlayFreeGamesStrategy, VideoSlotWithFreeGamesSessionHandling} from "pokie";
+import {PlayFreeGamesStrategy, VideoSlotWithFreeGamesSessionHandling} from "@jconradi/pokie";
 
 describe("PlayFreeGamesStrategy", () => {
     test("canPlayNextGame", () => {

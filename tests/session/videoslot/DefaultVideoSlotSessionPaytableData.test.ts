@@ -1,4 +1,4 @@
-import {Paytable} from "pokie";
+import {Paytable} from "@jconradi/pokie";
 
 describe("DefaultVideoSlotSessionPaytableData", () => {
     it("properly parses paytable data provided to its constructor", () => {

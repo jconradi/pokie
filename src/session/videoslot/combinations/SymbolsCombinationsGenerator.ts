@@ -5,7 +5,7 @@ import {
     SymbolsCombinationDescribing,
     SymbolsCombinationsGenerating,
     VideoSlotConfigDescribing,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export class SymbolsCombinationsGenerator implements SymbolsCombinationsGenerating {
     private readonly rng: RandomNumberGenerating;

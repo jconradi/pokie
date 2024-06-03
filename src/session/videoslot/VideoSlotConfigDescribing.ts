@@ -4,7 +4,7 @@ import {
     LinesPatternsDescribing,
     PaytableRepresenting,
     SymbolsSequenceDescribing,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export interface VideoSlotConfigDescribing extends AvailableBetsDescribing {
     getPaytable(): PaytableRepresenting;

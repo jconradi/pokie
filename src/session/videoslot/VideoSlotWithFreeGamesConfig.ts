@@ -5,7 +5,7 @@ import {
     SymbolsSequenceDescribing,
     VideoSlotConfig,
     VideoSlotWithFreeGamesConfigRepresenting,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export class VideoSlotWithFreeGamesConfig implements VideoSlotWithFreeGamesConfigRepresenting {
     private readonly baseConfig: VideoSlotConfig;

@@ -1,3 +1,3 @@
-import {SymbolsSequenceDescribing, SymbolsSequenceModifying} from "pokie";
+import {SymbolsSequenceDescribing, SymbolsSequenceModifying} from "@jconradi/pokie";
 
 export interface SymbolsSequenceRepresenting extends SymbolsSequenceDescribing, SymbolsSequenceModifying {}

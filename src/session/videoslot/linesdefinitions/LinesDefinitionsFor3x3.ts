@@ -1,4 +1,4 @@
-import {LinesDefinitionsDescribing} from "pokie";
+import {LinesDefinitionsDescribing} from "@jconradi/pokie";
 
 export class LinesDefinitionsFor3x3 implements LinesDefinitionsDescribing {
     private readonly definitions: Record<string, number[]> = {

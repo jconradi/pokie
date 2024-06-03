@@ -3,7 +3,7 @@ import {
     GameWithFreeGamesRoundNetworkData,
     VideoSlotInitialNetworkData,
     VideoSlotRoundNetworkData,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export type VideoSlotWithFreeGamesInitialNetworkData = {
     /** empty **/

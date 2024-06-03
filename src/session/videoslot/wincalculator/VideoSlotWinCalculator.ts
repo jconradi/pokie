@@ -7,7 +7,7 @@ import {
     WinningLineDescribing,
     WinningScatter,
     WinningScatterDescribing,
-} from "pokie";
+} from "@jconradi/pokie";
 
 export class VideoSlotWinCalculator implements VideoSlotWinCalculating {
     private readonly config: VideoSlotConfigDescribing;
