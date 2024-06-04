@@ -3,6 +3,8 @@ export * from "./net/GameSessionSerializer.js";
 export * from "./net/GameSessionSerializing.js";
 export * from "./net/GameWithFreeGamesNetworkData.js";
 export * from "./net/GameWithFreeGamesSessionSerializing.js";
+export * from "./net/cascading-slot/CascadingSlotNetworkData.js";
+export * from "./net/cascading-slot/CascadingSlotSessionSerializer.js";
 export * from "./net/videoslot/VideoSlotNetworkData.js";
 export * from "./net/videoslot/VideoSlotSessionSerializer.js";
 export * from "./net/videoslot/VideoSlotSessionSerializing.js";
