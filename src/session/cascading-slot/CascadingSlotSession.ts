@@ -22,6 +22,7 @@ export class CascadingSlotSession implements VideoSlotConfigDescribing,
     private readonly winCalculator: CascadinglotWinCalculator;
     private winAmount = 0;
     private symbolsCombination: SymbolsCombinationDescribing = new SymbolsCombination();
+    private initialSymbolsCombination: SymbolsCombinationDescribing = new SymbolsCombination();
     private cascadingResults: CascadingResult[] = [];
     private maximumWin = 1000;
 
@@ -44,6 +45,10 @@ export class CascadingSlotSession implements VideoSlotConfigDescribing,
 
     public setMaximumWin(amount: number) {
         this.maximumWin = amount;
+    }
+
+    public getInitialSymbolsCombination(): SymbolsCombinationDescribing {
+        return this.initialSymbolsCombination;
     }
 
     public getCascadingResults(): CascadingResult[] {
@@ -100,7 +105,7 @@ export class CascadingSlotSession implements VideoSlotConfigDescribing,
 
     public play(): void {
         this.baseSession.play();
-        this.symbolsCombination = this.combinationsGenerator.generateSymbolsCombination();
+        this.initialSymbolsCombination = this.symbolsCombination = this.combinationsGenerator.generateSymbolsCombination();
         this.winAmount = 0;
         this.cascadingResults = [];
         
