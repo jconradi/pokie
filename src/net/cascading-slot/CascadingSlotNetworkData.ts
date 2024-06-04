@@ -10,7 +10,7 @@ export type CascadingSlotInitialNetworkData = {
 CascadingSlotRoundNetworkData;
 
 export type CascadingSlotRoundNetworkData = {
-    reelSymbols: string[][];
+    reelsSymbols: string[][];
     cascadingResults: CascadingSlotResultsNetworkData[];
     winAmount: number;
 } & GameRoundNetworkData;

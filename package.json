@@ -1,6 +1,6 @@
 {
     "name": "@jconradi/pokie",
-    "version": "1.1.7",
+    "version": "1.1.8",
     "description": "A server-side video slot game logic framework for JavaScript and TypeScript.",
     "type": "module",
     "publishConfig": {

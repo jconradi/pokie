@@ -41,7 +41,7 @@ export class CascadingSlotSessionSerializer implements GameSessionSerializing {
             ...this.baseSerializer.getRoundData(session),
             cascadingResults: [],
             winAmount: session.getWinAmount(),
-            reelSymbols: session.getInitialSymbolsCombination().toMatrix()
+            reelsSymbols: session.getInitialSymbolsCombination().toMatrix()
         };
 
         for (const result of results) {
