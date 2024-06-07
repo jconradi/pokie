@@ -10,6 +10,7 @@ export interface CascadingResult {
     winningScatters: Record<string, WinningScatterDescribing>;
     winningClusters: Record<string, WinningClusterDescribing[]>;
     leftoverSymbols: SymbolsCombinationDescribing;
+    replacements: SymbolsCombinationDescribing;
     nextReels: SymbolsCombinationDescribing | undefined;
     winAmount: number;
 }
@@ -119,7 +120,8 @@ export class CascadingSlotSession implements VideoSlotConfigDescribing,
                 winningScatters: this.winCalculator.getWinningScatters(),
                 leftoverSymbols: this.winCalculator.getLeftoverSymbols(),
                 nextReels: undefined,
-                winAmount: this.winCalculator.getWinAmount()
+                winAmount: this.winCalculator.getWinAmount(),
+                replacements: new SymbolsCombination()
             });
 
             done = this.winCalculator.getIsDone();
@@ -127,6 +129,8 @@ export class CascadingSlotSession implements VideoSlotConfigDescribing,
             this.symbolsCombination = this.winCalculator.getLeftoverSymbols();
 
             const matrix = this.symbolsCombination.toMatrix(true);
+
+            const replacementMatrix: string[][] = [];
             // Fill in empty symbols
             for (let col = 0; col < matrix.length; col++) {
                 let row = 0;
@@ -135,7 +139,6 @@ export class CascadingSlotSession implements VideoSlotConfigDescribing,
                     row++;
                     hasReplacements = true;
                 }
-
 
                 if (!hasReplacements) {
                     continue;
@@ -152,6 +155,7 @@ export class CascadingSlotSession implements VideoSlotConfigDescribing,
 
             this.symbolsCombination = new SymbolsCombination().fromMatrix(matrix, true);
             this.cascadingResults[this.cascadingResults.length - 1].nextReels = this.symbolsCombination;
+            this.cascadingResults[this.cascadingResults.length - 1].replacements = new SymbolsCombination().fromMatrix(replacementMatrix);
 
             this.winAmount += this.winCalculator.getWinAmount();
             if (this.winAmount >= this.getMaximumWin()) {

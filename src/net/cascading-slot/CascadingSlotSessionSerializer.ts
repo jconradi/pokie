@@ -48,7 +48,7 @@ export class CascadingSlotSessionSerializer implements GameSessionSerializing {
             const resultNetworkData: CascadingSlotResultsNetworkData = {
                 winAmount: result.winAmount,
                 nextReels: result.nextReels?.toMatrix() || [],
-                leftoverSymbols: result.leftoverSymbols.toMatrix(),
+                replacements: result.replacements.toMatrix(),
                 winningScatters: Object.values(result.winningScatters).reduce((acc, scatter) => {
                     return {
                         ...acc,

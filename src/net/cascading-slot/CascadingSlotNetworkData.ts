@@ -19,7 +19,7 @@ export type CascadingSlotResultsNetworkData = {
     winningLines: Record<string, WinningLineNetworkData>;
     winningScatters: Record<string, WinningScatterNetworkData>;
     winningClusters: Record<string, WinningClusterNetworkData[]>;
-    leftoverSymbols: string[][];
+    replacements: string[][];
     nextReels: string[][];
     winAmount: number;
 }
